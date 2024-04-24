@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-argo-application
+  name: nginx-nightly-argo-application
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/yungsnowx/argocd-test.git
-    targetRevision: HEAD
+    targetRevision: deploy-nightly
     path: dev
   destination:
     server: https://kubernetes.default.svc
