@@ -18,3 +18,5 @@ spec:
     automated:
       selfHeal: true
       prune: true
+    syncWave:
+      schedule: "0 0 * * *"
