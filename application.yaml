@@ -7,11 +7,14 @@ spec:
   project: default
   source:
     repoURL: https://github.com/yungsnowx/argocd-test.git
-    targetRevision: deploy-nightly
+    targetRevision: HEAD
     path: dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-nightly
+    namespace: nginx
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
