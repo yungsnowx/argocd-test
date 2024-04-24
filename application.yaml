@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/yungsnowx/argocd-test.git
-    targetRevision: HEAD
+    targetRevision: deploy-nightly
     path: dev
   destination:
     server: https://kubernetes.default.svc
